@@ -14,7 +14,7 @@
       </li>
     </ul>
     <footer class="flex flex-row flex-center">
-      <a href="javascript://" class="logout button button-primary" @click="logout">Sign Out</a>
+      <a href="javascript://" class="logout button button-primary" @click="leave">Sign Out</a>
     </footer>
   </aside>
 </template>
@@ -30,6 +30,12 @@ export default {
   props: {
     users: Array,
     logout: Function
+  },
+  methods: {
+    leave () {
+      this.logout()
+        .then(function () { this.$router.push({ name: 'Login' }) }.bind(this))
+    }
   }
 }
 </script>
