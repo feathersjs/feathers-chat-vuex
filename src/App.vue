@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import 'getbase/dist/css/styles.css'
+import 'getbase/css/styles.css'
 import './styles/chat.css'
 
 export default {
